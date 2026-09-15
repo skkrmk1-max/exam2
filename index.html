@@ -3,28 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>시험 문제 출제해보기</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&display=swap" rel="stylesheet" crossorigin="anonymous">
 <style>
   :root{
-    --paper:#FAF9F4;
-    --ink:#201F1C;
-    --ink-soft:#5B5750;
-    --rule:#C9C2AF;
-    --rule-soft:#E3DECF;
-    --stamp:#2B3A55;
-    --stamp-soft:#EAEEF4;
-    --mark:#9C2B2B;
-    --mark-soft:#F3E1DF;
+    --paper:#FCFEFF;
+    --ink:#1E2A33;
+    --ink-soft:#57707C;
+    --rule:#AEDBEE;
+    --rule-soft:#E1F4FB;
+    --stamp:#1C86B8;
+    --stamp-soft:#E3F5FB;
+    --mark:#C4402F;
+    --mark-soft:#FBE2DE;
     --canvas-bg:#FFFFFF;
-    --font-serif:'Noto Serif KR', 'Nanum Myeongjo', serif;
-    --font-sans:'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    --font-serif:'Jua', 'Gaegu', cursive, sans-serif;
+    --font-sans:'Gaegu', 'Jua', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
   }
   *{ box-sizing:border-box; }
   html,body{
     margin:0; padding:0;
-    background:#E9E6DC;
+    background:#DFF2FB;
     font-family:var(--font-sans);
     color:var(--ink);
     -webkit-text-size-adjust:100%;
@@ -145,7 +148,7 @@
   #worksheetScreen{ display:none; }
   .toolbar{
     position:sticky; top:0; z-index:50;
-    background:#1E2430;
+    background:#14607F;
     color:#fff;
     padding:10px 14px;
     display:flex;
@@ -172,7 +175,7 @@
   }
   .toolbar button.primary{
     background:#fff;
-    color:#1E2430;
+    color:#14607F;
     border-color:#fff;
     font-weight:700;
   }
@@ -275,7 +278,7 @@
     justify-content:space-between;
     padding:8px 10px;
     border-bottom:1px solid var(--rule-soft);
-    background:#F4F2EA;
+    background:#EAF7FD;
   }
   .data-box-head .label{ font-size:12px; font-weight:700; color:var(--ink-soft); }
   .mode-toggle{ display:flex; gap:6px; }
@@ -386,7 +389,7 @@
     left:50%;
     bottom:22px;
     transform:translateX(-50%) translateY(14px);
-    background:#1E2430;
+    background:#14607F;
     color:#fff;
     padding:11px 18px;
     font-size:13px;
@@ -615,7 +618,7 @@
       <div class="type-card" id="cardCombo" tabindex="0" role="button" aria-pressed="false">
         <span class="type-tag">유형 2</span>
         <h3>자료 + &lt;보기&gt; 조합형</h3>
-        <p>자료를 제시한 뒤 &lt;보기&gt;에 ㄱ~ㅁ 진술을 적고, 선택지에서 옳은 것을 몇 개씩 묶어 고르는 문제예요.</p>
+        <p>자료를 제시한 뒤 &lt;보기&gt;에 ㄱ~ㄹ 진술을 적고, 선택지에서 옳은 것을 몇 개씩 묶어 고르는 문제예요.</p>
         <div class="sample">예) &lt;보기&gt;에서 옳은 것을 모두 고른 것은?</div>
       </div>
     </div>
@@ -715,7 +718,6 @@
             <div class="bogi-row"><span class="bogi-letter">ㄴ.</span><textarea rows="1" placeholder="두 번째 진술을 입력하세요"></textarea></div>
             <div class="bogi-row"><span class="bogi-letter">ㄷ.</span><textarea rows="1" placeholder="세 번째 진술을 입력하세요"></textarea></div>
             <div class="bogi-row"><span class="bogi-letter">ㄹ.</span><textarea rows="1" placeholder="네 번째 진술을 입력하세요"></textarea></div>
-            <div class="bogi-row"><span class="bogi-letter">ㅁ.</span><textarea rows="1" placeholder="다섯 번째 진술을 입력하세요"></textarea></div>
           </div>
         </div>
 
@@ -829,7 +831,7 @@
     typeSubLabel.textContent = '문제 유형 : ' + label;
     footerType.textContent = label;
     bogiBlock.style.display = selectedType === 'combo' ? 'block' : 'none';
-    choiceHint.textContent = selectedType === 'combo' ? '(보기의 ㄱ~ㅁ을 조합해 적어도 좋아요)' : '';
+    choiceHint.textContent = selectedType === 'combo' ? '(보기의 ㄱ~ㄹ을 조합해 적어도 좋아요)' : '';
     selectScreen.style.display = 'none';
     worksheetScreen.style.display = 'block';
     window.scrollTo(0,0);
